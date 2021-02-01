@@ -36,6 +36,7 @@ public class MainActivity extends AppCompatActivity implements EventListener {
 
         Logger.d("main process pid:"+android.os.Process.myPid());
 
+        //本地服务注册和使用
         findViewById(R.id.showLocalServiceBtn).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -43,6 +44,7 @@ public class MainActivity extends AppCompatActivity implements EventListener {
             }
         });
 
+        //远程服务注册和使用
         findViewById(R.id.showRemoteServiceBtn).setOnClickListener(new View.OnClickListener() {
             @Override
 
@@ -52,6 +54,7 @@ public class MainActivity extends AppCompatActivity implements EventListener {
         });
 
 
+        //在其他Module中使用AppleModule提供的服务
         findViewById(R.id.showServiceInOtherModule).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -59,6 +62,7 @@ public class MainActivity extends AppCompatActivity implements EventListener {
             }
         });
 
+        //订阅事件
         findViewById(R.id.subscribeEventBtn).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -67,6 +71,7 @@ public class MainActivity extends AppCompatActivity implements EventListener {
             }
         });
 
+        //发布事件
         findViewById(R.id.publishEventBtn).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -76,6 +81,7 @@ public class MainActivity extends AppCompatActivity implements EventListener {
             }
         });
 
+        //跳转到其他进程中去发布事件
         findViewById(R.id.gotoEventBtn).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -83,6 +89,7 @@ public class MainActivity extends AppCompatActivity implements EventListener {
             }
         });
 
+        //取消事件订阅
         findViewById(R.id.unsubscribeEventBtn).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -91,6 +98,7 @@ public class MainActivity extends AppCompatActivity implements EventListener {
             }
         });
 
+        //生命周期测试
         //TODO 这个测试需要改进，就是如果服务还没注册，需要提醒用户!
         findViewById(R.id.lifecycleTestBtn).setOnClickListener(new View.OnClickListener() {
             @Override
